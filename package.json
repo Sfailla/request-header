@@ -1,0 +1,21 @@
+{
+  "name": "reqheader",
+  "version": "1.0.0",
+  "description": "returns a parsed header with basic user info",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "steve failla",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "express-useragent": "^1.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

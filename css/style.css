@@ -1,0 +1,23 @@
+* {margin: 0; padding: 0;}
+
+body {
+  line-height: 2;
+  background-color: #000;
+  color: white;
+}
+.wrapper {
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+span {
+  color: #30d72d;
+}
+h1 {
+  color: red;
+}
+h3.red {
+  color: cyan;
+}
+h3 {
+  color: magenta;
+}
