@@ -32,11 +32,11 @@ app.get('/', (req,res) => {
 });
 // route for system page or /system
 app.get('/system', (req,res,next) => {
-  var hasToShowVK = req.acceptsLanguages( 'en','en-us', 'ru', 'uk', 'ru-mo', 'be' );
-  for (var i in sysInfo.ip) {
+  let userLanguage = req.acceptsLanguages( 'es', 'en', 'en-us', 'ru', 'uk', 'ru-mo', 'be' );
+  for (let i in sysInfo.ip) {
     res.json({
-      ip: sysInfo.ip[i][1].address
-    , language: hasToShowVK
+      ip: sysInfo.ip[i][1].address || req.ip
+    , language: userLanguage
     , computer: sysInfo.name
     , operatingSystem: req.useragent.os
     , browser: req.useragent.browser
@@ -48,7 +48,6 @@ app.get('/system', (req,res,next) => {
     next();
   }
 });
-
 // tells express app to listen at a specified port
 app.listen(port, (err, res) => {
   console.log('The server is running on port: ' + port);
